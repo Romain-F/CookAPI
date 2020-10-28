@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace CookAPI.Controllers
 {
 	[ApiController]
-	[Route("[controller]")]
+	[Route("api/[controller]")]
 	public class WeatherForecastController : ControllerBase
 	{
 		private static readonly string[] Summaries = new[]
@@ -23,6 +23,7 @@ namespace CookAPI.Controllers
 			_logger = logger;
 		}
 
+		// GET api/weatherforecast
 		[HttpGet]
 		public IEnumerable<WeatherForecast> Get()
 		{
